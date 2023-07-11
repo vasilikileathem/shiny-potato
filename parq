@@ -1,0 +1,9 @@
+beam.io.parquetio.WriteToParquet(
+        file_path_prefix='gs;//<bucket-name>/<directory>',
+        schema=pyarrow.schema(
+          [('gameID', pyarrow.string()), ('sessionID', pyarrow.string()),
+           ('sessionType', pyarrow.string(), ('year', pyarrow.int32()))
+          ]
+        ),
+        file_name_suffix='.parquet'
+)
